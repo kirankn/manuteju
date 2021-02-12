@@ -252,7 +252,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -330,10 +330,11 @@
 
 	$(document).mouseup(function (e)
 	{
-	    if (!$('#kvideo').is(e.target))
+	    if (!$('#kvideo').is(e.target) && vl)
 	    {
 	        $('#kvideo, #overlay').fadeOut('slow');
 	        $('#kvideo').html('');
+
 	    }
 	   // document.getElementById("my_audio").play();
 	});
