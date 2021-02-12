@@ -103,25 +103,40 @@
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
-				<div class="couple-half">
-					<div class="groom">
-						<img src="images/groom.png" alt="groom" class="img-responsive">
+				
+
+
+				<div id = "kcontainer">
+
+					<div class="couple-half">
+						<div class="groom">
+							<img src="images/groom.png" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-groom">
+							<h3>Manohar B K</h3>
+							<p>Advocate by profession. Practices in Bengaluru. Originally from Tumkur.</p>
+						</div>
+					</div>	
+
+
+					<p id="kbtn" onclick="javascript:kkn()"; class="heart text-center"><i class="icon-heart2"></i></p>
+
+					<div class="couple-half">
+						<div class="bride">
+							<img src="images/bride.png" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-bride">
+							<h3>Dr. Tejaswini M</h3>
+							<p>Pediatrician by profession. Originally from Mysuru</p>
+						</div>
 					</div>
-					<div class="desc-groom">
-						<h3>Manohar B K</h3>
-						<p>Advocate by profession. Practices in Bengaluru. Originally from Tumkur.</p>
-					</div>
+
+					<div id = "koverlay"></div>
 				</div>
-				<p class="heart text-center"><i class="icon-heart2"></i></p>
-				<div class="couple-half">
-					<div class="bride">
-						<img src="images/bride.png" alt="groom" class="img-responsive">
-					</div>
-					<div class="desc-bride">
-						<h3>Dr. Tejaswini M</h3>
-						<p>Pediatrician by profession. Originally from Mysuru</p>
-					</div>
+				<div id = "kvideo">
 				</div>
+
+
 			</div>
 		</div>
 	</div>
@@ -302,6 +317,23 @@
 	});
 
 	sakura.start();
+
+    function kkn() {
+    	document.getElementById("my_audio").pause();
+    	$('#kvideo, #koverlay').fadeIn('slow');
+    	$('#kvideo').html('<iframe width="100%" height=500 src=https://www.youtube.com/embed/FjE3e2fYIps frameborder=0 autoplay=1 allowfullscreen></iframe>');
+    }
+
+	$(document).mouseup(function (e)
+	{
+	    if (!$('#kvideo').is(e.target))
+	    {
+	        $('#kvideo, #overlay').fadeOut('slow');
+	        $('#kvideo').html('');
+	    }
+	   // document.getElementById("my_audio").play();
+	});
+
 
 
 	</script>
