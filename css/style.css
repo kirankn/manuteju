@@ -1014,6 +1014,10 @@ form label {
   .fh5co-section {
     padding: 3em 0;
   }
+  img.kdeco {
+    display: none;
+  }
+
 }
 
 .fh5co-section-gray {
