@@ -28,7 +28,7 @@
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content="Manohar weds Tejaswini"/>
-	<meta property="og:image" itemprop="image" content="images/og.jpg">
+	<meta property="og:image" itemprop="image" content="http://mantej.tk/images/og.jpg">
 	<meta property="og:image:secure_url" itemprop="image" content="https://mantej.tk/images/og.jpg">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta property="og:image:alt" content="Manohar weds Tejaswini">
@@ -37,9 +37,12 @@
 	<meta property="og:description" content="21st & 22nd February 2021 @ Mysuru"/>
 	<meta property="og:type" content="website" />
 	<meta property="og:updated_time" content="1613162337" />
-
-
-
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="mantej.tk">
+	<meta property="twitter:url" content="http://mantej.tk">
+	<meta name="twitter:title" content="Manohar weds Tejaswini">
+	<meta name="twitter:description" content="21st & 22nd February 2021 @ Mysuru">
+	<meta name="twitter:image" content="https://mantej.tk/images/og.jpg">
 
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
@@ -74,7 +77,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body onload="document.getElementById("my_audio").play();">
 
 	<img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
@@ -255,7 +258,7 @@
 	</div>
 
 	<div class="music">
-        <audio src="./audio/song.mp3" id="my_audio" loop="loop"></audio> 
+        <audio src="./audio/song.mp3" id="my_audio" autoplay loop="loop"></audio> 
     </div>
 
 	<div class="gototop js-top">
