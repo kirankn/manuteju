@@ -851,13 +851,14 @@ form label {
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
     font-size: 40px;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 #fh5co-header .display-tc h2,
@@ -1784,5 +1785,26 @@ form label {
   left: 0;
   display: block;
   z-index: 99999;
+}
+
+.linear-wipe {
+
+  text-align: center;
+  
+  background: linear-gradient(to right, #FFF 20%, #ff6699 40%, #ff6699 60%, #FFF 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 1s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 /*# sourceMappingURL=style.css.map */
