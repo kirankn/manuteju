@@ -71,13 +71,14 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
-	<body onload="document.getElementById("my_audio").play();">
+	<body onload="document.getElementById('my_audio').play();">
 
 
 <!-- 	<img alt='right' src='images/blank.gif' data-src-mobile='images/mright.png' data-src-desktop='images/right.png' class='top-right-decoration'/>
@@ -147,7 +148,9 @@
 						</div>
 					</div>
 
-					<div id = "koverlay"></div>
+					<div id = "koverlay">
+						<button id="closevideo" onclick="kcv()" style="display:none">CLOSE VIDEO</button>
+					</div>
 				</div>
 				<div id = "kvideo">
 				</div>
@@ -307,9 +310,9 @@
 
     });
 
-    $(document).on('scroll', function(){
-    	document.getElementById("my_audio").play();
-	});
+ //    $(document).on('scroll', function(){
+ //    	document.getElementById("my_audio").play();
+	// });
 
 	
     var sakura = new Sakura('body', {
@@ -336,17 +339,23 @@
     	minSize: 10
 	});
 
-	sakura.start();
 
     function kkn() {
+    	document.getElementById("closevideo").style = "display:block;margin-right:0";
     	document.getElementById("my_audio").pause();
     	$('#kvideo, #koverlay').fadeIn('slow');
-    	$('#kvideo').html('<iframe width="100%" height=500 src=https://www.youtube.com/embed/FjE3e2fYIps frameborder=0 autoplay=1 loop=1 playsinline=1 allowfullscreen></iframe>');
+    	$('#kvideo').html('<iframe width="100%" height=500 id="ytplayer" src=https://www.youtube.com/embed/FjE3e2fYIps?rel=0&enablejsapi=1&showinfo=0&autoplay=1&start=2&controls=0 rameborder=0 autoplay=1 allow="autoplay" playsinline=1 allowfullscreen></iframe>');
+    	 //video = document.getElementById("ytplayer").play();
+    }
+
+    function kcv() {
+    	document.getElementById("my_audio").play();
+    	document.getElementById("closevideo").style = "display:none";
     }
 
 	$(document).mouseup(function (e)
 	{
-	    if (!$('#kvideo').is(e.target) && vl)
+	    if (!$('#kvideo').is(e.target))
 	    {
 	        $('#kvideo, #overlay').fadeOut('slow');
 	        $('#kvideo').html('');
