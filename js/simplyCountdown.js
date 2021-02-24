@@ -131,6 +131,7 @@
                 plural: true,
                 inline: false,
                 enableUtc: false,
+                countUp: true,
                 onEnd: function () {
                     return;
                 },
