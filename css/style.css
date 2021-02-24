@@ -934,6 +934,7 @@ form label {
 }
 
 .simply-countdown {
+  display: none;
   /* The countdown */
   margin-bottom: 2em;
 }
